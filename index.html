@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Renovate Interiors | Home Renovation & Interior Revamp Specialists in Hyderabad</title>
+  <meta name="description" content="Hyderabad's specialized home renovation and interior revamp experts. Transform old apartments and villas with dust-free execution, fixed timelines, and transparent pricing." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-cream: #FAF8F5;
+      --bg-sand: #F2EDE4;
+      --bg-dark: #181715;
+      --bg-dark-card: #22201D;
+      --text-main: #1C1B18;
+      --text-muted: #5F5B53;
+      --text-light: #F7F4EF;
+      --accent-wood: #B87D4B;
+      --accent-wood-dark: #9A6335;
+      --accent-green: #25D366;
+      --border-light: #E4DDD2;
+      --shadow-sm: 0 4px 20px rgba(24, 23, 21, 0.05);
+      --shadow-md: 0 12px 36px rgba(24, 23, 21, 0.09);
+      --radius-md: 12px;
+      --radius-lg: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, .serif {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      line-height: 1.15;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 248, 245, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.65rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-main);
+    }
+
+    .brand-name span {
+      color: var(--accent-wood);
+    }
+
+    .brand-sub {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-muted);
+      margin-top: -4px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-main);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      cursor: pointer;
+      border: none;
+      transition: all 0.22s ease;
+    }
+
+    .btn-primary {
+      background: var(--bg-dark);
+      color: var(--text-light);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-wood-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-accent {
+      background: var(--accent-wood);
+      color: #fff;
+    }
+
+    .btn-accent:hover {
+      background: var(--accent-wood-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid var(--text-main);
+      color: var(--text-main);
+    }
+
+    .btn-outline:hover {
+      background: var(--text-main);
+      color: #fff;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 68px 0 80px;
+      background: radial-gradient(circle at top right, #EFE6D8 0%, var(--bg-cream) 55%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-sand);
+      border: 1px solid var(--border-light);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent-wood-dark);
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 4.8vw, 4rem);
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--accent-wood);
+    }
+
+    .hero p {
+      font-size: 1.08rem;
+      color: var(--text-muted);
+      max-width: 560px;
+      margin-bottom: 30px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .metric strong {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .metric span {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .hero-card {
+      background: var(--bg-dark);
+      color: var(--text-light);
+      padding: 32px;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: rgba(184, 125, 75, 0.18);
+    }
+
+    .hero-card h3 {
+      font-size: 1.7rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-card p {
+      font-size: 0.92rem;
+      color: #C9C2B8;
+      margin-bottom: 22px;
+    }
+
+    .checklist {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.92rem;
+      color: #EAE4DC;
+    }
+
+    .check-icon {
+      color: var(--accent-wood);
+      font-weight: 700;
+    }
+
+    /* Section Base */
+    section {
+      padding: 80px 0;
+    }
+
+    .section-head {
+      max-width: 680px;
+      margin-bottom: 44px;
+    }
+
+    .section-tag {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent-wood-dark);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .section-head h2 {
+      font-size: clamp(2rem, 3.6vw, 2.9rem);
+      margin-bottom: 12px;
+    }
+
+    .section-head p {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    /* Why Choose Us */
+    .bg-sand {
+      background: var(--bg-sand);
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .feature-card {
+      background: var(--bg-cream);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 26px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .feature-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--bg-sand);
+      color: var(--accent-wood-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+
+    .feature-card h3 {
+      font-size: 1.45rem;
+      margin-bottom: 8px;
+    }
+
+    .feature-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Before & After Interactive Slider */
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .tab-btn {
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--border-light);
+      background: #fff;
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .tab-btn.active {
+      background: var(--bg-dark);
+      color: #fff;
+      border-color: var(--bg-dark);
+    }
+
+    .ba-wrapper {
+      background: #fff;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .ba-stage {
+      position: relative;
+      width: 100%;
+      height: 430px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      user-select: none;
+      touch-action: pan-y;
+    }
+
+    .ba-panel {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 28px;
+    }
+
+    .ba-after {
+      background: linear-gradient(135deg, #2B2620 0%, #4E3B2B 48%, #B87D4B 100%);
+      color: #fff;
+    }
+
+    .ba-before {
+      background: linear-gradient(135deg, #7D7A74 0%, #9E9A90 50%, #C2BEB4 100%);
+      color: #1F1E1C;
+      clip-path: inset(0 50% 0 0);
+    }
+
+    .ba-visual-card {
+      max-width: 440px;
+      background: rgba(24, 23, 21, 0.72);
+      backdrop-filter: blur(8px);
+      color: #fff;
+      padding: 18px 20px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .ba-before .ba-visual-card {
+      background: rgba(255, 255, 255, 0.86);
+      color: #1C1B18;
+      border-color: rgba(0, 0, 0, 0.08);
+    }
+
+    .ba-label {
+      position: absolute;
+      top: 18px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      z-index: 4;
+    }
+
+    .label-before {
+      left: 18px;
+      background: rgba(255, 255, 255, 0.92);
+      color: #1C1B18;
+    }
+
+    .label-after {
+      right: 18px;
+      background: var(--accent-wood);
+      color: #fff;
+    }
+
+    .ba-divider {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 3px;
+      background: #fff;
+      z-index: 5;
+      pointer-events: none;
+      box-shadow: 0 0 12px rgba(0,0,0,0.4);
+    }
+
+    .ba-handle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: #fff;
+      color: var(--bg-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      font-size: 0.95rem;
+    }
+
+    .ba-range {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: ew-resize;
+      z-index: 6;
+    }
+
+    .ba-meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding-top: 16px;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    /* Services */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: #fff;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .service-card h3 {
+      font-size: 1.65rem;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: var(--text-muted);
+      font-size: 0.94rem;
+      margin-bottom: 18px;
+    }
+
+    .service-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .service-tags span {
+      font-size: 0.78rem;
+      background: var(--bg-sand);
+      color: var(--text-main);
+      padding: 5px 11px;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    /* Cost Estimator */
+    .estimator-box {
+      background: var(--bg-dark);
+      color: var(--text-light);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 36px;
+      align-items: center;
+      box-shadow: var(--shadow-md);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.86rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #DDD6CC;
+    }
+
+    .pill-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pill-choice {
+      padding: 9px 16px;
+      border-radius: 8px;
+      border: 1px solid #3A3630;
+      background: var(--bg-dark-card);
+      color: #EAE4DC;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .pill-choice.active {
+      background: var(--accent-wood);
+      border-color: var(--accent-wood);
+      color: #fff;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      accent-color: var(--accent-wood);
+    }
+
+    .estimate-result {
+      background: var(--bg-dark-card);
+      border: 1px solid #38332C;
+      border-radius: var(--radius-md);
+      padding: 28px;
+    }
+
+    .estimate-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: var(--accent-wood);
+      margin: 6px 0 12px;
+    }
+
+    .estimate-note {
+      font-size: 0.84rem;
+      color: #B6AFA4;
+      margin-bottom: 20px;
+    }
+
+    /* Process */
+    .process-step {
+      position: relative;
+      background: #fff;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 26px;
+    }
+
+    .step-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--accent-wood);
+      margin-bottom: 8px;
+    }
+
+    /* Booking & Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      background: #fff;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .field {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border-light);
+      background: var(--bg-cream);
+      font-family: inherit;
+      font-size: 0.94rem;
+      color: var(--text-main);
+    }
+
+    .field:focus {
+      outline: none;
+      border-color: var(--accent-wood);
+    }
+
+    .form-label-dark {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text-main);
+    }
+
+    .areas-box {
+      margin-top: 24px;
+      padding: 18px;
+      background: var(--bg-sand);
+      border-radius: var(--radius-md);
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    /* Floating WhatsApp */
+    .wa-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 200;
+      background: var(--accent-green);
+      color: #fff;
+      padding: 13px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.2s;
+    }
+
+    .wa-float:hover {
+      transform: translateY(-2px);
+    }
+
+    /* Toast / Modal Fallback for Sandboxed Previews */
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 84px;
+      transform: translateX(-50%);
+      background: var(--bg-dark);
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-size: 0.88rem;
+      z-index: 300;
+      display: none;
+      box-shadow: var(--shadow-md);
+      max-width: 92vw;
+      text-align: center;
+    }
+
+    footer {
+      background: var(--bg-dark);
+      color: #C7C0B6;
+      padding: 44px 0;
+      font-size: 0.88rem;
+    }
+
+    .footer-flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid,
+      .estimator-box,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid-4,
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+      .ba-stage {
+        height: 360px;
+      }
+      .estimator-box,
+      .contact-grid {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-wrap">
+      <a href="#" class="brand">
+        <span class="brand-name">Renovate <span>Interiors</span></span>
+        <span class="brand-sub">Hyderabad Home Revamp Experts</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#why-us">Why Us</a>
+        <a href="#transformations">Before &amp; After</a>
+        <a href="#services">Services</a>
+        <a href="#estimator">Cost Estimator</a>
+        <a href="#process">Process</a>
+      </nav>
+      <a href="#book-visit" class="btn btn-primary">Book Free Site Visit</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="badge">Hyderabad’s Dedicated Home Renovation Specialists</span>
+        <h1>Breathe New Life Into Your <em>Existing Home.</em></h1>
+        <p>
+          Large interior firms chase empty new builds. We specialize exclusively in revamping lived-in 2BHKs, 3BHKs, and independent villas across Hyderabad—with dust control, room-by-room execution, and transparent fixed quotes.
+        </p>
+        <div class="hero-ctas">
+          <a href="#book-visit" class="btn btn-primary">Book a Free Site Visit</a>
+          <a href="#estimator" class="btn btn-outline">Estimate Renovation Cost</a>
+        </div>
+        <div class="hero-metrics">
+          <div class="metric">
+            <strong>25–45 Days</strong>
+            <span>Typical Apartment Revamp</span>
+          </div>
+          <div class="metric">
+            <strong>Live-In Safe</strong>
+            <span>Phased Room-by-Room Work</span>
+          </div>
+          <div class="metric">
+            <strong>Zero Surprises</strong>
+            <span>Pre-Work Structural &amp; Wiring Audit</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3>Renovating an Older Home in Hyderabad?</h3>
+        <p>We solve the exact headaches that make homeowners delay renovating:</p>
+        <ul class="checklist">
+          <li><span class="check-icon">✓</span> <span><strong>Dust &amp; Noise Containment:</strong> Full plastic sheeting, floor protection, and daily end-of-day cleanup.</span></li>
+          <li><span class="check-icon">✓</span> <span><strong>No Need to Vacate:</strong> Phased execution so your family can comfortably stay at home.</span></li>
+          <li><span class="check-icon">✓</span> <span><strong>Upfront Hidden-Issue Check:</strong> We inspect dampness, plumbing, and old wiring before locking your quote.</span></li>
+          <li><span class="check-icon">✓</span> <span><strong>100% Renovation Focus:</strong> Your project never gets sidelined for massive new-tower contracts.</span></li>
+        </ul>
+        <a href="https://wa.me/919700770056?text=Hi%20Renovate%20Interiors%2C%20I%20want%20to%20discuss%20home%20renovation%20in%20Hyderabad." data-wa-link class="btn btn-accent" style="width:100%;">
+          Chat on WhatsApp (+91 9700770056)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section id="why-us" class="bg-sand">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">The Renovation Advantage</span>
+        <h2>Built Specifically for Occupied &amp; Older Homes</h2>
+        <p>Renovating an existing home requires surgical planning—not the assembly-line approach used for bare-shell flats.</p>
+      </div>
+      <div class="grid-4">
+        <div class="feature-card">
+          <div class="feature-icon">01</div>
+          <h3>Dust &amp; Noise Control</h3>
+          <p>Sealed work zones, protective floor mats, and strict society-hour compliance for Hyderabad gated communities.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">02</div>
+          <h3>Live-In Friendly</h3>
+          <p>We revamp one zone at a time so your kitchen, bedrooms, and washrooms remain usable throughout the makeover.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">03</div>
+          <h3>Transparent Quotes</h3>
+          <p>Detailed itemized BOQ after physical inspection—no sudden mid-project shocks when walls or tiles open up.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">04</div>
+          <h3>Dedicated Team</h3>
+          <p>In-house carpenters, electricians, plumbers, and a single site supervisor reporting daily progress on WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Before & After Showcase -->
+  <section id="transformations">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Real Transformations</span>
+        <h2>Slide to Compare Before &amp; After</h2>
+        <p>Drag the slider across each space to see how outdated layouts turn into warm, functional modern interiors.</p>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn active" data-project="living">3BHK Living Room • Kondapur</button>
+        <button class="tab-btn" data-project="kitchen">Modular Kitchen • Banjara Hills</button>
+        <button class="tab-btn" data-project="bedroom">Master Bedroom • Gachibowli</button>
+      </div>
+
+      <div class="ba-wrapper">
+        <div class="ba-stage" id="baStage">
+          <span class="ba-label label-before">Before Revamp</span>
+          <span class="ba-label label-after">After Revamp</span>
+
+          <!-- After Layer -->
+          <div class="ba-panel ba-after" id="afterPanel">
+            <div class="ba-visual-card">
+              <h3 id="afterTitle" style="font-size:1.5rem; margin-bottom:6px;">Warm Veneer TV Wall, Cove Ceiling &amp; Italian-Finish Flooring</h3>
+              <p id="afterDesc" style="font-size:0.9rem; color:#EAE4DC;">Replaced bulky showcase units with concealed storage, warm 3000K layered lighting, and seamless vitrified tiles.</p>
+            </div>
+          </div>
+
+          <!-- Before Layer -->
+          <div class="ba-panel ba-before" id="beforePanel">
+            <div class="ba-visual-card">
+              <h3 id="beforeTitle" style="font-size:1.5rem; margin-bottom:6px;">14-Year-Old Heavy Woodwork &amp; Dim Tube Lighting</h3>
+              <p id="beforeDesc" style="font-size:0.9rem; color:#4A4741;">Cramped POP borders, exposed wiring, yellowing wall paint, and outdated dark granite flooring.</p>
+            </div>
+          </div>
+
+          <div class="ba-divider" id="baDivider">
+            <div class="ba-handle">⇄</div>
+          </div>
+          <input type="range" min="5" max="95" value="50" aria-label="Before and after comparison slider" class="ba-range" id="baRange" />
+        </div>
+
+        <div class="ba-meta">
+          <strong id="projectMeta">Project Scope: Full Living &amp; Dining Makeover • Completed in 24 Days</strong>
+          <span>Tip: Drag left or right across the frame</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="bg-sand">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">What We Do</span>
+        <h2>Specialized Renovation Services</h2>
+        <p>Whether you need a complete apartment overhaul or a focused kitchen and wardrobe upgrade, we handle everything end-to-end.</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="service-card">
+          <div>
+            <h3>Full Home Interior Revamp</h3>
+            <p>Complete transformation of 2BHK, 3BHK, and independent houses—covering flooring, false ceiling, rewiring, painting, and custom furniture.</p>
+          </div>
+          <div class="service-tags">
+            <span>Flooring Overhaul</span>
+            <span>False Ceiling &amp; Lighting</span>
+            <span>Wall Repainting</span>
+            <span>Electrical Rewiring</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div>
+            <h3>Modular Kitchen Upgrade</h3>
+            <p>Dismantle old granite platforms and cramped cabinets to install ergonomic BWP plywood modular kitchens with soft-close hardware.</p>
+          </div>
+          <div class="service-tags">
+            <span>Tandem Drawers</span>
+            <span>Chimney &amp; Hob Fitout</span>
+            <span>Quartz Countertops</span>
+            <span>Plumbing Update</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div>
+            <h3>Living &amp; Bedroom Makeover</h3>
+            <p>Modernize bedrooms and living areas with floor-to-ceiling sliding wardrobes, floating TV units, study nooks, and acoustic paneling.</p>
+          </div>
+          <div class="service-tags">
+            <span>Sliding Wardrobes</span>
+            <span>TV &amp; Crockery Units</span>
+            <span>Pooja Unit Design</span>
+            <span>Smart Lighting</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div>
+            <h3>Bathroom &amp; Utility Modernization</h3>
+            <p>Replace leaky concealed pipes, stained tiles, and dated fittings with anti-skid tiles, glass shower partitions, and sleek vanities.</p>
+          </div>
+          <div class="service-tags">
+            <span>Waterproofing</span>
+            <span>Concealed Diverters</span>
+            <span>Anti-Skid Tiles</span>
+            <span>Vanity Storage</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hyderabad Cost Estimator -->
+  <section id="estimator">
+    <div class="container">
+      <div class="estimator-box">
+        <div>
+          <span class="section-tag" style="color:var(--accent-wood);">Instant Budget Planner</span>
+          <h2 style="font-size:2.4rem; margin-bottom:10px;">Hyderabad Renovation Cost Estimator</h2>
+          <p style="color:#C9C2B8; margin-bottom:26px;">Get a realistic ballpark figure in ₹ Lakhs based on Hyderabad material and labor rates.</p>
+
+          <div class="form-group">
+            <label>1. Home Configuration</label>
+            <div class="pill-group" id="bhkGroup">
+              <button type="button" class="pill-choice active" data-bhk="2BHK" data-base="4.5">2BHK Flat</button>
+              <button type="button" class="pill-choice" data-bhk="3BHK" data-base="6.8">3BHK Flat</button>
+              <button type="button" class="pill-choice" data-bhk="Villa" data-base="11.5">Independent House / Villa</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>2. Renovation Scope</label>
+            <div class="pill-group" id="scopeGroup">
+              <button type="button" class="pill-choice active" data-mult="1">Essential Refresh (Paint, Lights, Woodwork)</button>
+              <button type="button" class="pill-choice" data-mult="1.45">Complete Revamp (+ Kitchen, Ceiling, Bathrooms)</button>
+              <button type="button" class="pill-choice" data-mult="1.9">Luxury Overhaul (+ Flooring &amp; Civil Changes)</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="sqftRange">3. Approximate Area: <strong id="sqftVal" style="color:#fff;">1,250 sq. ft.</strong></label>
+            <input type="range" id="sqftRange" min="800" max="3500" step="50" value="1250" />
+          </div>
+        </div>
+
+        <div class="estimate-result">
+          <span style="font-size:0.8rem; text-transform:uppercase; letter-spacing:0.1em; color:#B6AFA4;">Estimated Investment</span>
+          <div class="estimate-price" id="estRange">₹5.2L – ₹6.4L</div>
+          <p id="estTimeline" style="font-weight:600; color:#EAE4DC; margin-bottom:10px;">Estimated Timeline: 25 – 32 Working Days</p>
+          <p class="estimate-note">Includes dismantling, material, carpentry, painting, and site supervision. Final quote locked after free physical site inspection.</p>
+          <a href="#book-visit" class="btn btn-accent" style="width:100%; margin-bottom:10px;">Lock Quote with Free Site Visit</a>
+          <a id="waEstimateBtn" href="https://wa.me/919700770056?text=Hi%20Renovate%20Interiors%2C%20I%20checked%20the%20renovation%20cost%20estimator%20on%20your%20website." data-wa-link class="btn btn-outline" style="width:100%; border-color:#575046; color:#EAE4DC;">
+            Send Estimate on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4-Step Process -->
+  <section id="process" class="bg-sand">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">How It Works</span>
+        <h2>4-Step Hassle-Free Renovation Process</h2>
+        <p>Clear milestones from day one so you always know what is happening at your home.</p>
+      </div>
+      <div class="grid-4">
+        <div class="process-step">
+          <div class="step-num">Step 01</div>
+          <h3>Free Site Inspection</h3>
+          <p>Our renovation engineer visits your Hyderabad home to measure spaces and inspect walls, plumbing, and wiring.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">Step 02</div>
+          <h3>3D Design &amp; Fixed Quote</h3>
+          <p>Approve practical 3D layouts, laminate finishes, and an itemized quote with a clear day-by-day schedule.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">Step 03</div>
+          <h3>Clean Phased Work</h3>
+          <p>Dust-contained dismantling and factory-finished modular installation supervised daily by your project lead.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">Step 04</div>
+          <h3>Handover &amp; Warranty</h3>
+          <p>Deep post-renovation cleaning, 45-point quality check, and workmanship warranty on all woodwork.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Site Visit Booking -->
+  <section id="book-visit">
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <span class="section-tag">Start Your Revamp</span>
+          <h2 style="font-size:2.4rem; margin-bottom:12px;">Book a Free Site Visit in Hyderabad</h2>
+          <p style="color:var(--text-muted); margin-bottom:22px;">
+            Speak directly with a renovation specialist—no pushy call-center scripts. We inspect your home and share practical ideas and budget options.
+          </p>
+
+          <p style="margin-bottom:8px;"><strong>Call / WhatsApp:</strong> <a href="tel:+919700770056" style="color:var(--accent-wood-dark); font-weight:700;">+91 97007 70056</a></p>
+          <p style="margin-bottom:8px;"><strong>Website:</strong> renovateinteriors.in</p>
+          <p style="margin-bottom:16px;"><strong>Instagram:</strong> @renovateinteriors</p>
+
+          <div class="areas-box">
+            <strong>Areas We Serve Across Hyderabad:</strong><br />
+            Banjara Hills • Jubilee Hills • Gachibowli • Kondapur • Madhapur • Kukatpally • Begumpet • Secunderabad • Manikonda • Miyapur • Sainikpuri
+          </div>
+        </div>
+
+        <form id="visitForm">
+          <div class="form-group">
+            <label class="form-label-dark" for="custName">Your Name *</label>
+            <input class="field" type="text" id="custName" placeholder="e.g., Ramesh Sharma" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label-dark" for="custPhone">Phone / WhatsApp Number *</label>
+            <input class="field" type="tel" id="custPhone" placeholder="e.g., 98490 XXXXX" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label-dark" for="custArea">Hyderabad Locality *</label>
+            <input class="field" type="text" id="custArea" placeholder="e.g., Kondapur / Jubilee Hills / Secunderabad" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label-dark" for="custScope">What do you want to renovate?</label>
+            <select class="field" id="custScope">
+              <option value="Full Home Interior Revamp">Full Home Interior Revamp (2BHK / 3BHK / Villa)</option>
+              <option value="Modular Kitchen Renovation">Modular Kitchen Renovation</option>
+              <option value="Living Room & Bedrooms">Living Room &amp; Bedrooms Makeover</option>
+              <option value="Bathrooms & Flooring">Bathrooms, Flooring &amp; Painting</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;">Request Free Site Visit</button>
+          <p id="formFeedback" style="margin-top:12px; font-size:0.88rem; color:var(--accent-wood-dark); font-weight:600;"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-flex">
+      <div>
+        <strong style="color:#fff; font-size:1.1rem;">Renovate Interiors</strong>
+        <p style="margin-top:4px;">Specialized Home Renovation &amp; Interior Revamp • Hyderabad, Telangana</p>
+      </div>
+      <div>
+        <a href="tel:+919700770056" style="color:#fff; font-weight:600;">+91 97007 70056</a> &nbsp;|&nbsp;
+        <a href="https://wa.me/919700770056" data-wa-link style="color:var(--accent-wood); font-weight:600;">WhatsApp Us</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a
+    href="https://wa.me/919700770056?text=Hi%20Renovate%20Interiors%2C%20I%20would%20like%20to%20enquire%20about%20home%20renovation%20in%20Hyderabad."
+    data-wa-link
+    class="wa-float"
+    aria-label="Chat with Renovate Interiors on WhatsApp"
+  >
+    <span>WhatsApp Us</span>
+  </a>
+
+  <div class="toast" id="toastMsg"></div>
+
+  <script>
+    // 1. Before & After Slider
+    const baRange = document.getElementById('baRange');
+    const beforePanel = document.getElementById('beforePanel');
+    const baDivider = document.getElementById('baDivider');
+
+    function updateSlider(val) {
+      beforePanel.style.clipPath = `inset(0 ${100 - val}% 0 0)`;
+      baDivider.style.left = `${val}%`;
+    }
+
+    baRange.addEventListener('input', (e) => updateSlider(e.target.value));
+
+    const projectData = {
+      living: {
+        beforeTitle: "14-Year-Old Heavy Woodwork & Dim Tube Lighting",
+        beforeDesc: "Cramped POP borders, exposed wiring, yellowing wall paint, and outdated dark granite flooring.",
+        afterTitle: "Warm Veneer TV Wall, Cove Ceiling & Italian-Finish Flooring",
+        afterDesc: "Replaced bulky showcase units with concealed storage, warm 3000K layered lighting, and seamless vitrified tiles.",
+        meta: "Project Scope: Full Living & Dining Makeover • Completed in 24 Days",
+        afterBg: "linear-gradient(135deg, #2B2620 0%, #4E3B2B 48%, #B87D4B 100%)"
+      },
+      kitchen: {
+        beforeTitle: "Cramped Granite Counter & Rusted Wire Baskets",
+        beforeDesc: "Poor ventilation, damp under-sink cabinet, and zero tall-unit storage in a 12-year-old apartment.",
+        afterTitle: "Sleek Acrylic & Oak BWP Modular Kitchen",
+        afterDesc: "Quartz countertop, Hettich soft-close tandem drawers, built-in microwave/oven tall unit, and ducted chimney.",
+        meta: "Project Scope: Complete Kitchen Dismantle & Modular Fitout • Completed in 18 Days",
+        afterBg: "linear-gradient(135deg, #1E2826 0%, #354A45 50%, #9E734B 100%)"
+      },
+      bedroom: {
+        beforeTitle: "Bulky Swing Wardrobes Eating Up Floor Space",
+        beforeDesc: "Peeling laminate, creaky hinges, poor bedside plug points, and dull wall finish.",
+        afterTitle: "Floor-to-Ceiling Fluted Glass & Warm Oak Sliding Wardrobe",
+        afterDesc: "Loft storage integrated cleanly to the ceiling, upholstered headboard wall, and warm reading sconces.",
+        meta: "Project Scope: Master Bedroom & Wardrobe Revamp • Completed in 16 Days",
+        afterBg: "linear-gradient(135deg, #272124 0%, #4A383E 50%, #B87D4B 100%)"
+      }
+    };
+
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const p = projectData[btn.dataset.project];
+        document.getElementById('beforeTitle').textContent = p.beforeTitle;
+        document.getElementById('beforeDesc').textContent = p.beforeDesc;
+        document.getElementById('afterTitle').textContent = p.afterTitle;
+        document.getElementById('afterDesc').textContent = p.afterDesc;
+        document.getElementById('projectMeta').textContent = p.meta;
+        document.getElementById('afterPanel').style.background = p.afterBg;
+        baRange.value = 50;
+        updateSlider(50);
+      });
+    });
+
+    // 2. Cost Estimator
+    let baseVal = 4.5;
+    let selectedBhk = '2BHK';
+    let scopeMult = 1;
+    const sqftRange = document.getElementById('sqftRange');
+    const sqftVal = document.getElementById('sqftVal');
+    const estRange = document.getElementById('estRange');
+    const estTimeline = document.getElementById('estTimeline');
+    const waEstimateBtn = document.getElementById('waEstimateBtn');
+
+    function recalcEstimate() {
+      const sqft = Number(sqftRange.value);
+      sqftVal.textContent = `${sqft.toLocaleString('en-IN')} sq. ft.`;
+      const areaFactor = sqft / 1150;
+      const low = (baseVal * scopeMult * areaFactor).toFixed(1);
+      const high = (low * 1.22).toFixed(1);
+      const daysLow = Math.round(20 + scopeMult * 8 + (sqft - 800) / 140);
+      const daysHigh = daysLow + 7;
+
+      estRange.textContent = `₹${low}L – ₹${high}L`;
+      estTimeline.textContent = `Estimated Timeline: ${daysLow} – ${daysHigh} Working Days`;
+
+      const msg = encodeURIComponent(
+        `Hi Renovate Interiors, I used your cost estimator: ${selectedBhk} (${sqft} sq.ft.), estimate ₹${low}L–₹${high}L. I'd like to discuss my renovation in Hyderabad.`
+      );
+      waEstimateBtn.href = `https://wa.me/919700770056?text=${msg}`;
+    }
+
+    document.querySelectorAll('#bhkGroup .pill-choice').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('#bhkGroup .pill-choice').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        baseVal = Number(btn.dataset.base);
+        selectedBhk = btn.dataset.bhk;
+        recalcEstimate();
+      });
+    });
+
+    document.querySelectorAll('#scopeGroup .pill-choice').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('#scopeGroup .pill-choice').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        scopeMult = Number(btn.dataset.mult);
+        recalcEstimate();
+      });
+    });
+
+    sqftRange.addEventListener('input', recalcEstimate);
+    recalcEstimate();
+
+    // 3. Safe WhatsApp Link Handler (works in live browsers & handles sandboxed iframe previews gracefully)
+    const toast = document.getElementById('toastMsg');
+    function showToast(text) {
+      toast.textContent = text;
+      toast.style.display = 'block';
+      clearTimeout(window._toastTimer);
+      window._toastTimer = setTimeout(() => { toast.style.display = 'none'; }, 4500);
+    }
+
+    document.querySelectorAll('[data-wa-link]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const url = link.getAttribute('href');
+        const win = window.open(url, '_blank', 'noopener,noreferrer');
+        if (!win) {
+          e.preventDefault();
+          if (navigator.clipboard) {
+            navigator.clipboard.writeText('+91 9700770056').catch(() => {});
+          }
+          showToast('WhatsApp number +91 9700770056 copied! Open WhatsApp or visit wa.me/919700770056.');
+        }
+      });
+    });
+
+    // 4. Site Visit Form -> Instant Confirmation + WhatsApp Hand-off
+    document.getElementById('visitForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('custName').value.trim();
+      const phone = document.getElementById('custPhone').value.trim();
+      const area = document.getElementById('custArea').value.trim();
+      const scope = document.getElementById('custScope').value;
+
+      const feedback = document.getElementById('formFeedback');
+      feedback.textContent = `Thank you, ${name}! Opening WhatsApp to confirm your free site visit in ${area}...`;
+
+      const waText = encodeURIComponent(
+        `Hi Renovate Interiors, I'd like to book a Free Site Visit.
+Name: ${name}
+Phone: ${phone}
+Locality: ${area}
+Scope: ${scope}`
+      );
+      const waUrl = `https://wa.me/919700770056?text=${waText}`;
+      const opened = window.open(waUrl, '_blank', 'noopener,noreferrer');
+      if (!opened) {
+        showToast('Request saved! Message us on WhatsApp at +91 97007 70056 to confirm your slot.');
+      }
+    });
+  </script>
+</body>
+</html>
